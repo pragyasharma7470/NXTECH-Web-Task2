@@ -1,0 +1,222 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-align: center;
+     align-items: center;
+     font-family: cursive;
+     background-color: #c1aefa;
+ }
+ 
+ body {
+     width: 100%;
+     height: 100vh;
+     background: rgb(245, 247, 248);
+     color: #000405;
+     display: grid;
+     place-items: center;
+     text-align: center;
+     align-items: center;
+     font-family: sans-serif;
+     background-color: #10023b;
+ }
+ 
+ .container {
+     width: 80%;
+     max-width: 850px;
+     padding: 30px;
+     text-align: center;
+     display: none;
+ }
+ 
+ .container h1 {
+     font-size: 50px;
+     margin-bottom: 40px;
+     text-decoration: underline;
+     text-underline-offset: 8px;
+ }
+ 
+ .container .question {
+     font-size: 30px;
+     margin-top: 50px;
+ }
+ 
+ .container .choices {
+     margin-top: 50px;
+ }
+ 
+ .choice {
+     font-size: 15px;
+     background-color: rgb(250, 247, 250);
+     color: #080808;
+     margin: 10px auto;
+     padding: 12px;
+     border: 1px solid black;
+     text-align: left;
+     width: 40%;
+     cursor: pointer;
+     opacity: 0;
+     transform: translateY(50%);
+     animation: fade-in 0.5s ease forwards;
+ }
+ 
+ .choice:hover {
+     background-color: rgb(251, 200, 239);
+ }
+ 
+ .choice.selected {
+     background-color: #12067b;
+     color: #fff;
+ }
+ 
+ .btn {
+     width: 20%;
+     font-size: 20px;
+     padding: 12px 20px;
+     font-weight: 600;
+     margin: 20px auto 0 auto;
+     background-color: #00ff48;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     text-align: center;
+ }
+ 
+ .btn:hover {
+     background-color: #98f7a7;
+ }
+ 
+ .scoreCard {
+     font-size: 24px;
+     margin-top: 20px;
+ }
+ 
+ .alert {
+     background-color: #ff0303;
+     border-radius: 5px;
+     width: 100%;
+     padding: 3 px;
+     position: absolute;
+     top: 0;
+     display: none;
+     text-align: left;
+ }
+ /* .startBtn {
+    padding-block: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgb(5, 5, 5);
+} */
+ 
+ .startBtn {
+     box-shadow: 0 0 5px rgb(0, 255, 42), 0 0 25px rgb(0, 255, 42);
+ }
+ 
+ .startBtn:hover {
+     box-shadow: 0 0 5px, 0 0 25px rgb(0, 255, 42), 0 0 5px rgb(0, 255, 42), 0 0 100px rgb(0, 255, 42), 0 0 200px rgb(0, 255, 42);
+ }
+ 
+ .nextBtn {
+     background-color: #4003f7;
+ }
+ 
+ .nextBtn:hover {
+     background-color: #9e7ff9;
+ }
+ 
+ .timer {
+     position: absolute;
+     top: 40px;
+     bottom: 80px;
+     right: 350px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: #f8fbf8;
+     border: 5px solid #e384f7;
+     font-size: 20px;
+     font-weight: 800;
+     padding: 12px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ /* Adding Animation to  timer  */
+ /* @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1, 2);
+    }
+    100% {
+        transform: scale(1);
+        animation: pulse 1s ease-in-out infinite;
+    }
+}
+
+
+/* Adding Animation to  choices  */
+ /* @keyframes fade-in { 
+
+0% {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+}
+@media screen and(max-width: 900px) {
+    .container {
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .container h1 {
+        font-size: 24px;
+    }
+    
+    .container .question {
+        font-size: 22px;
+    }
+    
+    .timer {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+*/
+ 
+ @keyframes fade-in {
+     0% {
+         opacity: 0;
+         transform: translateY(50%);
+     }
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+ 
+ @media screen and(max-width: 900px) {
+     .container {
+         width: 100%;
+         margin-top: 50px;
+     }
+     .container h1 {
+         font-size: 24px;
+     }
+     .container .question {
+         font-size: 22px;
+     }
+     .timer {
+         width: 50px;
+         height: 50px;
+         font-size: 20px;
+     }
+ }
